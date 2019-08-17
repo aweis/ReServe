@@ -32,6 +32,7 @@
     "test": "esy x TestReServe.exe"
   },
   "dependencies": {
+    "@opam/lwt": "*",
     "@opam/h2": "*",
     "@opam/dune": ">=1.6.0",
     "@esy-ocaml/reason": "*",
