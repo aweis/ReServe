@@ -1,1 +1,4 @@
-let foo = () => print_endline("Hello");
+let foo = () => {
+  ignore(Server.startHTTPServer());
+  print_endline("Hello");
+};

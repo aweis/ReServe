@@ -7,4 +7,5 @@
    (name ReServe)
    ; Other libraries list this name in their package.json 'require' field to use this library.
    (public_name re-serve.lib)
+   (libraries  lwt logs uri str lwt.unix httpaf httpaf-lwt-unix h2 h2-lwt-unix console.lib unix containers )
 )

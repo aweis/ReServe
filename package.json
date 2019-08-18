@@ -19,7 +19,8 @@
     },
     "library": {
       "name": "re-serve.lib",
-      "namespace": "ReServe"
+      "namespace": "ReServe",
+      "require": [ "lwt", "logs", "uri", "str", "lwt.unix", "httpaf", "httpaf-lwt-unix", "h2", "h2-lwt-unix", "console.lib", "unix", "containers" ]
     },
     "executable": {
       "require": ["re-serve.lib"],
@@ -32,8 +33,14 @@
     "test": "esy x TestReServe.exe"
   },
   "dependencies": {
+    "@opam/containers": "*",
     "@opam/lwt": "*",
     "@opam/h2": "*",
+    "@opam/h2-lwt-unix": "*",
+    "@opam/httpaf": "*",
+    "@opam/httpaf-lwt-unix": "*",
+    "@opam/logs": "*",
+    "@opam/uri": "*",
     "@opam/dune": ">=1.6.0",
     "@esy-ocaml/reason": "*",
     "ocaml": "^4.4.0"
