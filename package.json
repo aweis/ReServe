@@ -1,5 +1,5 @@
 {
-  "name": "re-serve",
+  "name": "re-server",
   "version": "0.0.0",
   "description": "My Project",
   "esy": {
@@ -7,30 +7,30 @@
     "buildDev": "pesy",
     "release": {
       "releasedBinaries": [
-        "ReServeApp.exe"
+        "ReServerApp.exe"
       ]
     }
   },
   "buildDirs": {
     "test": {
-      "require": ["re-serve.lib"],
-      "main": "TestReServe",
-      "name": "TestReServe.exe"
+      "require": ["re-server.lib"],
+      "main": "TestReServer",
+      "name": "TestReServer.exe"
     },
     "library": {
-      "name": "re-serve.lib",
-      "namespace": "ReServe",
+      "name": "re-server.lib",
+      "namespace": "ReServer",
       "require": [ "lwt", "logs", "uri", "str", "lwt.unix", "httpaf", "httpaf-lwt-unix", "h2", "h2-lwt-unix", "console.lib", "unix", "containers" ]
     },
     "executable": {
-      "require": ["re-serve.lib"],
-      "main": "ReServeApp",
-      "name": "ReServeApp.exe"
+      "require": ["re-server.lib"],
+      "main": "ReServerApp",
+      "name": "ReServerApp.exe"
     }
   },
   "scripts": {
     "pesy": "bash -c 'env PESY_MODE=update pesy'",
-    "test": "esy x TestReServe.exe"
+    "test": "esy x TestReServer.exe"
   },
   "dependencies": {
     "@opam/containers": "*",
